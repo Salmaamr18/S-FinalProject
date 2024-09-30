@@ -1,0 +1,22 @@
+﻿@model FinalProject.Models.User
+
+<h2>Register</h2>
+<form method="post" asp-action="Register">
+    <div>
+        <label>First Name</label>
+        <input asp-for="FirstName" />
+    </div>
+    <div>
+        <label>Last Name</label>
+        <input asp-for="LastName" />
+    </div>
+    <div>
+        <label>Email</label>
+        <input asp-for="Email" />
+    </div>
+    <div>
+        <label>Password</label>
+        <input asp-for="Password" type="password" />
+    </div>
+    <button type="submit">Register</button>
+</form>

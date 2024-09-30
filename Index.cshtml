@@ -1,0 +1,27 @@
+﻿@model IEnumerable<FinalProject.Models.User>
+
+<h2>Users</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.FirstName @item.LastName</td>
+                <td>@item.Email</td>
+                <td>
+                    <a href="/User/Details/@item.UserId" class="btn btn-info">Details</a>
+                    <a href="/User/Edit/@item.UserId" class="btn btn-primary">Edit</a>
+                    <a href="/User/Delete/@item.UserId" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/User/Create" class="btn btn-success">Add New User</a>
